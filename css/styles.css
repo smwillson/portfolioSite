@@ -26,8 +26,45 @@ hr {
   width: 300%;
 }
 
-article {
+.zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* unvisited link */
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #CDFEAA;
+  cursor: pointer; 
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}
+a[href*="http"] {
+  background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+article >p {
   margin: auto;
+  line-height: 1.5;
+  font-size: 12pt;
+  font-style: normal;
+  color: black;
 }
 
 .wrapper {
@@ -36,7 +73,6 @@ article {
   grid-template-columns: repeat(4, 1fr);
   background-color: #FFF;
   width: 100%;
-  grid-gap: 10px;
   height: 100%;
 }
 
@@ -57,7 +93,7 @@ div.header-div>img {
   margin-left: 0;
   width: 30%;
   max-width: 30%;
-  
+
 }
 
 div.header-div h1 {
@@ -109,10 +145,11 @@ div.catImage-div-class>img {
   box-shadow: 5px 10px 18px #888888
 }
 
-div.text-container-class {
+figure > figcaption {
   text-align: center;
   padding: 0 20px;
   text-transform: capitalize;
+  font-size: 12pt;
 }
 
 div.main-class-div {
@@ -149,6 +186,22 @@ figure >img {
 
 }
 
+.hobbies-class-div > figure:nth-of-type(1)  {
+  grid-column: 1;
+
+}
+
+#footer{
+  grid-column: 1/span 4;
+  grid-row:9;
+  height:60px;
+  background-color: #ccc;
+  width: 100%;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+  font-size: 15pt;
+}
 /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
