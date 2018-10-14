@@ -11,7 +11,7 @@ I love to travel and explore new places as well
 My favorite quote:
 
 <p>Eager eye and willing ear,
-Lovingly shall nestle near.
+<p>Lovingly shall nestle near.
 <p><p>
 In a Wonderland they lie,
 <p>Dreaming as the days go by,
@@ -104,6 +104,7 @@ mainContent.append(aboutMeImg);
 
 //set up hobbies section
 const hobbiesText = document.createElement('p');
+hobbiesText.classList.add("blinking");
 const hobbyContent = document.getElementsByClassName("hobbies-class-div")[0];
 hobbiesText.innerHTML = `Hobbies`;
 hobbyContent.append(hobbiesText);
