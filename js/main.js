@@ -130,4 +130,4 @@ hobbiesArray.forEach(hobby => {
 //add content to footer
 
 const footer = document.getElementById("footer");
-footer.innerHTML =`Let's connect and keep in <a href="https://www.linkedin.com/in/sama-mushtaq-baa265127/"> touch`;
+footer.innerHTML =`Let's connect and keep in <a href="https://www.google.com/"> touch`;
