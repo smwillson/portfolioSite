@@ -370,7 +370,25 @@ figure>img {
   ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  //CSS
+  .wrapper {
+    position: absolute;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "cats"
+      "hobbies"
+      "footer";
+    padding: 0;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: auto;
+    background: #e9e9e9;
+    grid-gap: 15px;
+    padding: 5px;
+  }
 }
 
 /*
@@ -378,7 +396,75 @@ figure>img {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-  //CSS
+  .wrapper {
+    position: absolute;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "cats"
+      "hobbies"
+      "footer";
+    padding: 0;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: auto;
+    background: #e9e9e9;
+    grid-gap: 15px;
+    padding: 5px;
+  }
+
+  hr {
+    display: none;
+  }
+
+  div.header-div {
+    background: #fdfdfd;
+    border-radius: 25px;
+    margin: auto;
+    width: auto;
+    padding: 0;
+    grid-area: header;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  div.cat-class-div {
+    grid-area: cats;
+    background: #fdfdfd;
+    border-radius: 35px;
+  }
+
+  div.main-class-div {
+    grid-area: main;
+    grid-template-columns: 1fr .75fr;
+    background: #fdfdfd;
+    border-radius: 35px;
+  }
+
+  div.hobbies-class-div {
+    background: #fdfdfd;
+    border-radius: 35px;
+    grid-area: hobbies;
+    width: auto;
+    overflow-x: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+  }
+
+  .hobbies-class-div>figure:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hobbies-class-div>p:nth-of-type(1) {
+    grid-column: 1;
+    font-size: 30pt;
+    margin: auto;
+  }
 }
 
 /*
@@ -429,22 +515,23 @@ figure>img {
 
   div.main-class-div {
     grid-area: main;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     background: #fdfdfd;
     border-radius: 35px;
-
   }
 
   div.hobbies-class-div {
     grid-area: hobbies;
-      grid-template-columns: repeat(3,1fr);
-      position: relative;
-      background: #fdfdfd;
-      border-radius: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    background: #fdfdfd;
+    border-radius: 35px;
   }
-div.hobbies-class-div >p{
-  font-size: 12pt;
- }
+
+  div.hobbies-class-div>p {
+    font-size: 12pt;
+  }
+
   #footer {
     grid-area: footer;
   }
@@ -475,9 +562,11 @@ div.hobbies-class-div >p{
     grid-gap: 15px;
     padding: 5px;
   }
-  hr{
+
+  hr {
     display: none;
   }
+
   div.header-div {
     background: #fdfdfd;
     border-radius: 25px;
@@ -491,33 +580,33 @@ div.hobbies-class-div >p{
 
   div.main-class-div {
     grid-area: main;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     background: #fdfdfd;
     border-radius: 35px;
-
   }
 
-    div.main-class-div >article{
-      text-align: center;
-      padding: 10px;
-    }
+  div.main-class-div>article {
+    text-align: center;
+    padding: 10px;
+  }
 
-    div.cat-class-div {
-      grid-area: cats;
-      background: #fdfdfd;
-      border-radius: 35px;
-    }
+  div.cat-class-div {
+    grid-area: cats;
+    background: #fdfdfd;
+    border-radius: 35px;
+  }
 
   div.hobbies-class-div {
     grid-area: hobbies;
-      grid-template-columns: repeat(3,1fr);
-      position: relative;
-      background: #fdfdfd;
-      border-radius: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    background: #fdfdfd;
+    border-radius: 35px;
   }
-  div.hobbies-class-div >p{
+
+  div.hobbies-class-div>p {
     font-size: 18pt;
-   }
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
