@@ -547,10 +547,18 @@ figure>img {
     width: 70%;
   }
 
+  .header-div h1 {
+    font-size: 1.5em;
+  }
+
   div.cat-class-div {
     grid-area: cats;
     background: #fdfdfd;
     border-radius: 35px;
+  }
+
+  figure>figcaption {
+    font-size: 15pt;
   }
 
   div.main-class-div {
@@ -567,6 +575,10 @@ figure>img {
 
   div.main-class-div>article {
     grid-area: aboutMe;
+  }
+
+  article>p {
+    font-size: 15pt;
   }
 
   div.main-class-div>img {
