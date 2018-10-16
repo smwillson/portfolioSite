@@ -21,23 +21,6 @@
   </div>
 </body>
 <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-<!--Register a service worker, that caches content served to the users -->
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('/sw.js', {
-        scope: '/'
-      })
-      .then(function() {
-        console.log("Service Worker Registered");
-      });
-
-    navigator.serviceWorker.ready.then(function(registration) {
-      console.log('Service Worker Ready');
-    });
-  }
-</script>
-
 </body>
 
 </html>
