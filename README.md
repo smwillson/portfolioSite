@@ -27,4 +27,4 @@ The responsiveness was tested mainly on the following devices:
 2. Mobile: Google Nexus 5
 3. Tablet: Apple iPad
 
-* Pictures used in the project are owned by me.
+### NB: Pictures used in the project are owned by me.
