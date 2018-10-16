@@ -38,22 +38,24 @@ let hobbiesArray = [`images/aquarium.jpg`,
 ];
 
 let hobbiesTextArray = [
-  `My aquarium where my Betta fish, Dragontail, lives`,
+  `The aquarium where my Betta fish, Dragontail, lives`,
   `Home-made cookies,compliments to the chef`,
   `An aerial view of Denver city, Colorado.`
 ];
 let hobbyCaptions = [`Aquarium Keeping`, `Baking`, `Traveling`];
 
+/*create a title and add it to the <head>*/
 const header = document.getElementsByTagName("head")[0];
 const title = document.createElement("title");
 title.innerHTML = "My Page";
 
 header.append(title);
 
+/*add role to the wrapper <div>*/
 const wrapper = document.getElementsByClassName("wrapper")[0];
-wrapper.setAttribute('role',"main");
-wrapper.setAttribute('aria-label',"main content of the page")
+wrapper.setAttribute('aria-label',"all contents of the page")
 
+/*create and setup roles for the section that holds the cat images*/
 catImageArray.forEach(cat => {
 
   const catName = cat.replace(/^.*[\\\/]/, '').replace(".jpg","").trim();
@@ -80,7 +82,7 @@ catImageArray.forEach(cat => {
 
 });
 
-//popluate the header now
+/*create and setup roles for elements that will populate the header section*/
 const logo = document.createElement('img');
 logo.setAttribute('src', logoPath);
 logo.setAttribute('alt', "Logo of the webpage");
@@ -98,7 +100,7 @@ pageHeader.append(logo);
 pageHeader.append(pageHeading);
 pageHeader.append(pageSubHeading);
 
-//create main article
+/*create and setup roles for elements that will populate the main section of the page*/
 const aboutMe = document.createElement('article');
 aboutMe.setAttribute('role',"contentinfo");
 aboutMe.setAttribute('aria-label',"A short bio");
@@ -116,7 +118,7 @@ aboutMeImg.classList.add('profile-pic');
 mainContent.append(aboutMeImg);
 
 
-//set up hobbies section
+/*create and setup roles for elements that will populate the hobbies section of the page*/
 const hobbiesText = document.createElement('p');
 hobbiesText.classList.add("blinking");
 const hobbyContent = document.getElementsByClassName("hobbies-class-div")[0];
