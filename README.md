@@ -1,4 +1,4 @@
-#Portfolio site project
+# Portfolio site project
 
 In this project, I created a single page application to in the style of a blog about me page.
 
@@ -6,7 +6,7 @@ In this project, I created a single page application to in the style of a blog a
 
 In order to clone the project onto your computer via HTTPS URLs (recommended) do the following:
 
-1. Open a new command prompt window
+1. Open a new command prompt window.
 
 2. Type git clone https://github.com/smwillson/portfolioSite.git at the prompt.
 
