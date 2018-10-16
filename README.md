@@ -21,8 +21,10 @@ Open the index.html file in the browser of choice.
 The styling was achieved using the grid-layout.
 
 # Testing for responsiveness
-Media queries were added to make the page more responsive of devices of various types.
+Media queries were added to make the page more responsive for devices of various types.
 The responsiveness was tested mainly on the following devices:
 1. Desktop
 2. Mobile: Google Nexus 5
 3. Tablet: Apple iPad
+
+* Pictures used in the project are owned by me.
