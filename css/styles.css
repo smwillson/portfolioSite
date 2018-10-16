@@ -302,7 +302,6 @@ figure>img {
     width: auto;
     grid-area: cats;
     overflow: hidden;
-    /*z-index: 1;*/
     position: relative;
   }
 
