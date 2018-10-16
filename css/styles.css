@@ -122,6 +122,8 @@ div.header-div>img {
   align-self: center;
   margin-left: 0;
   width: 30%;
+  max-width: 100%;
+  height: auto;
 }
 
 div.header-div h1 {
@@ -170,7 +172,7 @@ div.catImage-div-class>img {
   width: 100%;
   height: auto;
   max-width: 100%;
-  box-shadow: 5px 10px 18px #888888
+  box-shadow: 5px 10px 18px #888888;
 }
 
 figure>figcaption {
@@ -178,6 +180,7 @@ figure>figcaption {
   padding: 0 20px;
   text-transform: capitalize;
   font-size: 12pt;
+  font-family: 'Cherry Swash', cursive;
 }
 
 div.main-class-div {
@@ -205,9 +208,11 @@ div.hobbies-class-div {
 }
 
 figure>img {
-  width: 70%;
+  width: 40%;
   margin-left: 0;
-  box-shadow: 5px 10px 18px #888888
+  box-shadow: 5px 10px 18px #888888;
+  max-width: 100%;
+  height: auto;
 }
 
 .hobbies-class-div>figure:nth-of-type(1) {
@@ -381,6 +386,94 @@ figure>img {
     grid-gap: 15px;
     padding: 5px;
   }
+
+  hr {
+    display: none;
+  }
+
+  div.header-div {
+    background: #fdfdfd;
+    border-radius: 25px;
+    margin: auto;
+    width: auto;
+    padding: 0;
+    grid-area: header;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  div.cat-class-div {
+    grid-area: cats;
+    background: #fdfdfd;
+    border-radius: 35px;
+  }
+
+  div.main-class-div {
+    grid-area: main;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "profilePic"
+      "aboutMe";
+    background: #fdfdfd;
+    border-radius: 35px;
+    padding: 10px;
+  }
+
+  div.main-class-div>article {
+    grid-area: aboutMe;
+  }
+
+  article>p {
+    font-size: 15pt;
+  }
+
+  div.main-class-div>img {
+    grid-area: profilePic;
+  }
+
+  div.hobbies-class-div {
+    background: #fdfdfd;
+    border-radius: 35px;
+    grid-area: hobbies;
+    width: auto;
+    overflow-x: hidden;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+    grid-template-rows: auto;
+  }
+
+  .hobbies-class-div>figure:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hobbies-class-div>figure:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .hobbies-class-div>figure:nth-of-type(3) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .hobbies-class-div>p:nth-of-type(1) {
+    grid-column: 1;
+    font-size: 30pt;
+    margin: auto;
+  }
+
+  /*styling figcaption: https://www.techrepublic.com/blog/web-designer/html5-figure-and-figure-caption-elements/*/
+  figure>figcaption {
+    padding: 5px;
+    font-size: 2em;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    word-wrap: normal;
+    text-align: center;
+  }
 }
 
 /*
@@ -447,6 +540,11 @@ figure>img {
     grid-area: header;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    padding: 2%;
+  }
+
+  div.header-div>img {
+    width: 70%;
   }
 
   div.cat-class-div {
@@ -457,9 +555,22 @@ figure>img {
 
   div.main-class-div {
     grid-area: main;
-    grid-template-columns: 1fr .75fr;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "profilePic"
+      "aboutMe";
     background: #fdfdfd;
     border-radius: 35px;
+    padding: 10px;
+  }
+
+  div.main-class-div>article {
+    grid-area: aboutMe;
+  }
+
+  div.main-class-div>img {
+    grid-area: profilePic;
   }
 
   div.hobbies-class-div {
@@ -529,6 +640,11 @@ figure>img {
     grid-area: header;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    padding: 2%;
+  }
+
+  div.header-div>img {
+    width: 70%;
   }
 
   hr {
@@ -543,7 +659,7 @@ figure>img {
 
   div.main-class-div {
     grid-area: main;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 100%;
     background: #fdfdfd;
     border-radius: 35px;
   }
@@ -599,7 +715,7 @@ figure>img {
     width: auto;
     background: #e9e9e9;
     grid-gap: 15px;
-    padding: 5px;
+    padding: 2%;
   }
 
   hr {
@@ -615,6 +731,11 @@ figure>img {
     grid-area: header;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
+    padding: 2%;
+  }
+
+  div.header-div>img {
+    width: 70%;
   }
 
   div.main-class-div {
@@ -622,8 +743,8 @@ figure>img {
     grid-template-columns: 100%;
     grid-auto-rows: auto;
     grid-template-areas:
-    "profilePic"
-    "aboutMe";
+      "profilePic"
+      "aboutMe";
     background: #fdfdfd;
     border-radius: 35px;
     padding: 10px;
@@ -634,10 +755,11 @@ figure>img {
     padding: 10px;
     grid-area: aboutMe;
   }
-div.main-class-div>img {
 
-  grid-area:profilePic;
-}
+  div.main-class-div>img {
+    grid-area: profilePic;
+  }
+
   div.cat-class-div {
     grid-area: cats;
     background: #fdfdfd;

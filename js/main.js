@@ -44,6 +44,16 @@ let hobbiesTextArray = [
 ];
 let hobbyCaptions = [`Aquarium Keeping`, `Baking`, `Traveling`];
 
+const header = document.getElementsByTagName("head")[0];
+const title = document.createElement("title");
+title.innerHTML = "My Page";
+
+header.append(title);
+
+const wrapper = document.getElementsByClassName("wrapper")[0];
+wrapper.setAttribute('role',"main");
+wrapper.setAttribute('aria-label',"main content of the page")
+
 catImageArray.forEach(cat => {
 
   const catName = cat.replace(/^.*[\\\/]/, '').replace(".jpg","").trim();
@@ -53,7 +63,7 @@ catImageArray.forEach(cat => {
   catImage.classList.add("zoom");
 
   const catImageFigure = document.createElement('figure');
-  catImageFigure.setAttribute('aria-role', "presentation");
+  catImageFigure.setAttribute('role', "presentation");
   catImageFigure.append(catImage);
 
   const catImageCaption = document.createElement('figcaption');
@@ -62,6 +72,9 @@ catImageArray.forEach(cat => {
   catImageFigure.append(catImageCaption);
 
   let divider = document.getElementsByClassName("cat-class-div")[0];
+  divider.setAttribute('aria-label',"cat image section");
+  divider.setAttribute('role',"group");
+  divider.setAttribute('aria-label',"Section for cat images");
 
   divider.append(catImageFigure);
 
@@ -80,19 +93,20 @@ const pageSubHeading = document.createElement('h3');
 pageSubHeading.innerHTML = `Software developer, cat-mom, aquarium-keeper`;
 
 const pageHeader = document.getElementsByClassName("header-div")[0];
-pageHeader.setAttribute('aria-role', 'header');
+pageHeader.setAttribute('role', 'heading');
 pageHeader.append(logo);
 pageHeader.append(pageHeading);
 pageHeader.append(pageSubHeading);
 
 //create main article
 const aboutMe = document.createElement('article');
-aboutMe.setAttribute('aria-role',"contentinfo");
+aboutMe.setAttribute('role',"contentinfo");
 aboutMe.setAttribute('aria-label',"A short bio");
 
 aboutMe.innerHTML =ABOUT_ME_TEXT;
 const mainContent = document.getElementsByClassName("main-class-div")[0];
-mainContent.setAttribute('aria-role',"main");
+mainContent.setAttribute('role',"main");
+mainContent.setAttribute('aria-label',"A short section about me");
 mainContent.append(aboutMe);
 
 const aboutMeImg = document.createElement('img');
@@ -106,6 +120,9 @@ mainContent.append(aboutMeImg);
 const hobbiesText = document.createElement('p');
 hobbiesText.classList.add("blinking");
 const hobbyContent = document.getElementsByClassName("hobbies-class-div")[0];
+hobbyContent.setAttribute('role',"group");
+hobbyContent.setAttribute('aria-label',"Section for hobby images");
+
 hobbiesText.innerHTML = `Hobbies`;
 hobbyContent.append(hobbiesText);
 
@@ -117,7 +134,7 @@ hobbiesArray.forEach(hobby => {
   hobbyImage.classList.add('zoom');
 
   const hobbyTitle = document.createElement('figure');
-  hobbyTitle.setAttribute('aria-role', "presentation");
+  hobbyTitle.setAttribute('role', "presentation");
   const caption = document.createElement('figcaption');
   caption.innerHTML = hobbyCaptions[index++];
   hobbyTitle.append(hobbyImage);
